@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs">
+  <li ng-class="{active: activeState=='/'}"><a href="#/">All Events</a></li>
+  <li ng-class="{active: activeState=='/upcoming'}"><a href="#/upcoming">Upcoming Events</a></li>
+  <li ng-class="{active: activeState=='/local'}"><a href="#/local">Local Events</a></li>
+</ul>
+<edit-events event-results="eventResults"></edit-events>
+<div ng-show="!eventResults.length">
+	<p>Sorry, there are no events!</p>
+</div>

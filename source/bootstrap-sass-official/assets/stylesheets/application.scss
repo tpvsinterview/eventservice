@@ -1,0 +1,42 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.nav-tabs {
+	margin-top: 20px;
+	border-bottom: none;
+}
+
+.eventResults {
+	width: 100%;
+	border: 1px solid #999;
+
+	tr:nth-child(even) td {
+		background: #eee;
+	}
+
+	th {
+		border: 1px solid #999;
+		padding: 10px;
+	}
+
+	td {
+		padding: 10px;
+
+		input {
+			display: none;
+		}
+
+		a {
+			cursor: pointer;
+		}
+	}
+
+	.editMode {
+		input {
+			display: block;
+		}
+		span {
+			display: none;
+		}
+	}
+}

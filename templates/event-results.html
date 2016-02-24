@@ -1,0 +1,18 @@
+<table class="eventResults" ng-show="eventResults.length">
+	<tr>
+		<th>Event Name</th>
+		<th>Date</th>
+		<th>Venue</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Action</th>
+	</tr>
+		<tr ng-repeat="result in eventResults" ng-class="{editMode: editMode}">
+		<td><span ng-bind="result.name"></span><input ng-model="result.name"></td>
+		<td><span ng-bind="result.date"></span><input ng-model="result.date"></td>
+		<td><span ng-bind="result.venue.name"></span><input ng-model="result.venue.name"></td>
+		<td><span ng-bind="result.venue.city"></span><input ng-model="result.venue.city"></td>
+		<td><span ng-bind="result.venue.state"></span><input ng-model="result.venue.state"></td>
+		<td><span ng-if="!editMode"><a ng-click="removeEvent(result)">remove</a> / </span><a ng-show="!editMode" ng-click="editEvent(result)">edit</a><a ng-show="editMode" ng-click="toggleEdit(result)">done editing</a></td>
+	</tr>
+</table>
